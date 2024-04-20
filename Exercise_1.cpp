@@ -20,6 +20,7 @@ int generateRandomNumber() {
 void outputMessage() {
     int randomDays = generateRandomNumber();
 
+    // check the returned value from generateRandomNumber function and outputs the message
     if (randomDays <= 10 && randomDays > 5) {
         cout << "Your subscription will expire soon. Renew now!" << endl;
     } else if (randomDays <= 5 && randomDays > 1) {
@@ -35,6 +36,7 @@ void outputMessage() {
 
 
 int main() {
+    // call outputMessage function to print message to the console
     outputMessage();
     return 0;
 }

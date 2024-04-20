@@ -20,6 +20,7 @@ int generateRandomNumber() {
 void outputMessage() {
     int randomDays = generateRandomNumber();
     
+    // check the returned value from generateRandomNumber function and outputs the message 
     switch (randomDays)
     {
         case 10:
@@ -49,6 +50,7 @@ void outputMessage() {
 
 
 int main() {
+    // call outputMessage function to print message to the console
     outputMessage();
     return 0;
 }
