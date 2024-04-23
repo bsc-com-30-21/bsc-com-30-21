@@ -17,8 +17,7 @@ int main() {
         if (elements[i][0] == 'B') {
             // print the element to the console
             cout << elements[i] << endl;
-        }
-        
+        }   
     }
     
     return 0;
