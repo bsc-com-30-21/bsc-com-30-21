@@ -4,7 +4,6 @@
 
 using namespace std;
 
-
 // counts the number of vowels (both upper and lower case) present in the string
 int countVowels(string str) {
     int count = 0;
@@ -69,13 +68,6 @@ string capitalizeSecondLetter(string str) {
 }
 
 int main() {
-    // Create the module_statement.txt file
-    ofstream file("module_statement.txt");
-    if (file.is_open()) {
-        file << "This is the Advanced Computer Programming Module";
-        file.close();
-    }
-
     // Open the module_statement.txt file and assign its contents to fileData
     ifstream fileData("module_statement.txt");
     string sentence((istreambuf_iterator<char>(fileData)), istreambuf_iterator<char>());

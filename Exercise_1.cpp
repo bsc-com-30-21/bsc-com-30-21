@@ -17,6 +17,7 @@ int generateRandomNumber() {
     return daysUntilExpiration;
 }
 
+// outputs the message to the console
 void outputMessage() {
     int randomDays = generateRandomNumber();
 
