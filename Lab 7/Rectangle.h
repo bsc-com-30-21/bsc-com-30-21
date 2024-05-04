@@ -7,9 +7,9 @@ private:
     float width;
 
 public:
-    Rectangle();
-    Rectangle(float length, float width) : length(length), width(width) {}
-    ~Rectangle();
+    Rectangle(); // Default constructor
+    Rectangle(float l, float w); // Overloaded constructor
+    ~Rectangle(); // Destructor
 
     void setLength(float l);
     void setWidth(float w);
@@ -19,3 +19,4 @@ public:
 };
 
 #endif // RECTANGLE_H
+

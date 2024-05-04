@@ -2,6 +2,8 @@
 
 Rectangle::Rectangle() : length(0.0), width(0.0) {}
 
+Rectangle::Rectangle(float l, float w) : length(l), width(w) {}
+
 Rectangle::~Rectangle() {}
 
 void Rectangle::setLength(float l) {
