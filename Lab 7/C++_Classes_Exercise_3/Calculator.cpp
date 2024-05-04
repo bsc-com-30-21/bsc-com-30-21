@@ -1,3 +1,4 @@
+// Main.cpp
 #include <iostream>
 #include "Square.h"
 #include "Triangle.h"
@@ -6,7 +7,8 @@
 
 using namespace std;
 
-int main() {
+// Function to handle user's choice
+void handleChoice() {
     char choice;
     
     // Loop until the user chooses to quit
@@ -18,7 +20,6 @@ int main() {
         cout << "3. Calculate the area of a circle\n";
         cout << "4. Quit\n";
         
-        // Accept user's choice
         cin >> choice;
 
         // Perform action based on user's choice
@@ -28,8 +29,10 @@ int main() {
                 double side;
                 cout << "Enter the side length of the square: ";
                 cin >> side;
+
                 // Create a square object with the provided side length
                 shapes::Square square(side);
+
                 // Calculate and display the area of the square
                 cout << "Area of the square: " << shapes::Area::calculateArea(square) << endl;
                 break;
@@ -39,8 +42,10 @@ int main() {
                 double base, height;
                 cout << "Enter the base and height of the triangle: ";
                 cin >> base >> height;
+
                 // Create a triangle object with the provided base and height
                 shapes::Triangle triangle(base, height);
+
                 // Calculate and display the area of the triangle
                 cout << "Area of the triangle: " << shapes::Area::calculateArea(triangle) << endl;
                 break;
@@ -50,8 +55,10 @@ int main() {
                 double radius;
                 cout << "Enter the radius of the circle: ";
                 cin >> radius;
+
                 // Create a circle object with the provided radius
                 shapes::Circle circle(radius);
+                
                 // Calculate and display the area of the circle
                 cout << "Area of the circle: " << shapes::Area::calculateArea(circle) << endl;
                 break;
@@ -59,10 +66,17 @@ int main() {
             case '4':
                 // If the user chooses to quit, exit the program
                 cout << "Exiting program...\n";
-                return 0;
+                return;
             default:
                 // Display a message for invalid choice
                 cout << "Invalid choice. Please try again.\n";
         }
     }
+}
+
+// Main function
+int main() {
+    // Call the function to handle user's choice
+    handleChoice();
+    return 0;
 }
