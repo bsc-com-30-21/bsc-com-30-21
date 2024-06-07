@@ -1,4 +1,3 @@
 #include "Base.h"
-void Base::DummyFunction
-{
-}
+
+void Base::DummyFunction() {}
