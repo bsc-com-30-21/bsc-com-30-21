@@ -4,28 +4,24 @@
 using namespace std;
 
 class Box {
-    public:
+public:
+    Box();
 
-    Box():
+    Box(const double newLength, const double newBreadth, const double newHeight);
 
-    Box(const double newLength; const double newBreadth; const double newHeight);
-    
     ~Box();
 
     double GetVolume();
 
     void SetLength(double len);
-
     void SetBreadth(double bre);
-
     void SetHeight(double hei);
 
-    // overload + operator to add two Boc objects.
-    Box opertor+(const Box& b);
+    // Overload + operator to add two Box objects.
+    Box operator+(const Box& b);
 
-    private:
-
-    double length; //length of a box
-    double breadth; //breadth of a box
-    double height; //height of a box
+private:
+    double length;   // Length of a box
+    double breadth;  // Breadth of a box
+    double height;   // Height of a box
 };

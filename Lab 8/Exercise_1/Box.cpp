@@ -14,9 +14,7 @@ Box::Box(const double newLength, const double newBreadth, const double newHeight
     height = newHeight;
 }
 
-Box::~Box() {
-
-}
+Box::~Box() {}
 
 double Box::GetVolume() {
     return length * breadth * height;
@@ -34,13 +32,11 @@ void Box::SetHeight(double hei) {
     height = hei;
 }
 
-// overload + operator to add two Box objects.
+// Overload + operator to add two Box objects.
 Box Box::operator+(const Box& b) {
     Box box;
-
     box.length = this->length + b.length;
     box.breadth = this->breadth + b.breadth;
-    box.height = this->hright + b.height;
-
+    box.height = this->height + b.height;
     return box;
 }

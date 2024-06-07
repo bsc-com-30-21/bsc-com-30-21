@@ -1,23 +1,26 @@
 #pragma once
 
 #include <string>
-
 using namespace std;
 
-class Person{
-    public:
-
+class Person {
+public:
     Person();
     Person(float newWeight);
 
-    ~Person();
+    operator int ();
 
-    //overload the add operator
-    float operator + (const Person& otherPerson);
+    // Overload the add operator
+    float operator+(const Person& otherPerson);
 
-    private:
+    bool operator== (const Person& otherPerson);
+    bool operator!= (const Person& otherPerson);
 
-    float mWeight;
-    string mFirstName;
-    int mAge;
+    bool operator< (const Person& otherPerson);
+    bool operator> (const Person& otherPerson);
+
+
+private:
+    float Weight;
+    string name;
 };

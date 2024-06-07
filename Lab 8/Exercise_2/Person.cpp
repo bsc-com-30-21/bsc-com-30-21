@@ -1,15 +1,21 @@
-#include <iostream>
 #include "Person.h"
-using namespace std;
 
+Person::Person() : Weight(0.0) {}
 
-int main() {
-    Person person1(70.5);
-    Person person2(65.0);
+Person::Person(float newWeight) : Weight(newWeight) {}
 
-    float combinedWeight = person1 + person2;
+float Person::operator+(const Person& otherPerson) {
+    return this->Weight + otherPerson.Weight;
+}
 
-    cout << "Combined weight: " << combinedWeight << " kg" << endl;
+bool Person::operator==(const Person& otherPerson) {
+    return this->Weight + otherPerson.Weight;
+}
 
-    return 0;
+bool Person::operator!=(const Person& otherPerson) {
+    return this->Weight + otherPerson.Weight;
+}
+
+Person::operator int() {
+    return mAge;
 }
