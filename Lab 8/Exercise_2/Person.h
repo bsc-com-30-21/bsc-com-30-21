@@ -8,6 +8,8 @@ public:
     Person();
     Person(float newWeight);
 
+    int mAge; // Declare mAge variable
+
     operator int ();
 
     // Overload the add operator
